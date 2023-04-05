@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace LDVELH
@@ -6,7 +7,8 @@ namespace LDVELH
     public class PageGraphVertex
     {
         public int PageNumber { get; }
-        public IReadOnlyCollection<int> Links { get; }
+        public IReadOnlyCollection<string> Links { get; }
+        public IReadOnlyCollection<int> LinkIds => Links?.Select(x => Convert.ToInt32(x.TrimStart('(').TrimEnd(')'))).ToArray();
         public string Notes { get; }
 
         public bool IsFirst { get; }

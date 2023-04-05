@@ -13,6 +13,11 @@
         Title="MainWindow" Height="960" Width="1280">
     <Window.Resources>
         <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
+        <Style TargetType="{x:Type graphSharpControls:EdgeControl}">
+            <Style.Setters>
+                <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Self},Path=Edge.EdgeBrush}"/>
+            </Style.Setters>
+        </Style>
         <Style TargetType="{x:Type graphSharpControls:VertexControl}">
             <Style.Triggers>
                 <DataTrigger Binding="{Binding IsFirst, Mode=OneWay}" Value="True">

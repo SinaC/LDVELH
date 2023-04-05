@@ -1,5 +1,4 @@
 ﻿using Prism.Mvvm;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -35,13 +34,13 @@ namespace LDVELH
             set => SetProperty(ref _notes, value);
         }
 
-        public IEnumerable<int> Links
+        public IEnumerable<string> Links
         {
             get
             {
                 if (string.IsNullOrWhiteSpace(RawLinks) || RawLinks == "/")
-                    return Enumerable.Empty<int>();
-                return RawLinks.Split(',', ';', '.', '|').Select(x => Convert.ToInt32(x));
+                    return Enumerable.Empty<string>();
+                return RawLinks.Split(',', ';', '.', '|');
             }
         }
     }

@@ -175,7 +175,7 @@ LePirateDeLAuDela
 174:334:Regnad
 175:247.284:
 176:/:
-177:345.96:arme en os codage a=1,... NIGHTDEATH (ou COUPE VIE) -> 96
+177:345.(96):arme en os codage a=1,... NIGHTDEATH (ou COUPE VIE) -> 96
 178:217:
 179:239:
 180:262:
@@ -245,7 +245,7 @@ LePirateDeLAuDela
 244:55:
 245:-1:
 246:222.268.95.125:
-247:269,129:mot de passe a=1,b=2 -> 129
+247:269,(129):mot de passe a=1,b=2 -> 129
 248:82.62:
 249:/:
 250:79.107:
@@ -255,7 +255,7 @@ LePirateDeLAuDela
 254:287:
 255:86.157:
 256:-1:
-257:90:370 nautiques Est et 460 nautiques Sud de port-aux Crabes.
+257:(90):370 nautiques Est et 460 nautiques Sud de port-aux Crabes.
 258:334:
 259:34.290:
 260:109.294.9,207:
@@ -331,7 +331,7 @@ LePirateDeLAuDela
 330:-1:
 331:104.376:
 332:256.347:
-333:132.38:nombre de dents bracelet requin -> 38
+333:132.(38):nombre de dents bracelet requin -> 38
 334:150.303.365.315.103.51:
 335:283:
 336:/:
@@ -362,7 +362,7 @@ LePirateDeLAuDela
 361:136.106.286.302.177:
 362:4:
 363:57.91:
-364:81.9.207:1,9,25,57->121
+364:81.9.207.(121):1,9,25,57->121
 365:351.42:
 366:191.141.97.211:
 367:/:
