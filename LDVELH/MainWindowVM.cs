@@ -89,7 +89,7 @@ namespace LDVELH
             if (string.IsNullOrWhiteSpace(Name))
                 return;
             var lines = new[] { Name }.Concat(Pages.Select(x => $"{x.PageNumber}:{x.RawLinks}:{x.Notes}"));
-            File.WriteAllLines($@"c:\temp\ldvelh_{Name}.txt", lines);
+            File.WriteAllLines($@"C:\PRJ\Personal\LDVELH\books\ldvelh_{Name}.txt", lines);
             IsRawLinksFocused = true;
         }
 
