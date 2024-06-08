@@ -12,6 +12,9 @@ namespace LDVELH
         {
             // create vertices
             var vertices = pages.Select(x => new PageGraphVertex(x)).ToList();
+            var duplicates = vertices.GroupBy(x => x.PageNumber).Where(g => g.Count() > 1);
+            if (duplicates.Any())
+                throw new Exception("Following pages are duplicates: " + string.Join(", ", duplicates.Select(x => x.Key)));
             AddVertexRange(vertices);
             // create edges excluding reverse link
             var edges = new List<PageGraphEdge>();

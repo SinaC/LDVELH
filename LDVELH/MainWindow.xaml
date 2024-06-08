@@ -25,9 +25,10 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="{x:Type graphSharpControls:VertexControl}">
                                 <Border CornerRadius="5"
-                                        Width="30"
-                                        Height="30"
-                                        Background="Black">
+                                        Width="50"
+                                        Height="50"
+                                        Background="Black"
+                                        ToolTip="{Binding Notes}">
                                     <StackPanel VerticalAlignment="Center"
                                                 Orientation="Vertical">
                                         <TextBlock HorizontalAlignment="Center"
@@ -48,9 +49,10 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="{x:Type graphSharpControls:VertexControl}">
                                 <Border CornerRadius="5"
-                                        Width="30"
-                                        Height="30"
-                                        Background="Green">
+                                        Width="50"
+                                        Height="50"
+                                        Background="Green"
+                                        ToolTip="{Binding Notes}">
                                     <StackPanel VerticalAlignment="Center"
                                                 Orientation="Vertical">
                                         <TextBlock HorizontalAlignment="Center"
@@ -73,13 +75,37 @@
                                 <Border CornerRadius="5"
                                         Width="30"
                                         Height="30"
-                                        Background="Red">
+                                        Background="Red"
+                                        ToolTip="{Binding Notes}">
                                     <StackPanel VerticalAlignment="Center"
                                                 Orientation="Vertical">
                                         <TextBlock HorizontalAlignment="Center"
                                                    Foreground="Black"
                                                    Text="{Binding PageNumber, Mode=OneWay}"/>
                                         <TextBlock Foreground="Black"
+                                                   Visibility="{Binding Notes, Converter={StaticResource StringToVisibilityConverter}}"
+                                                   Text="{Binding Notes}"/>
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsMandatory, Mode=OneWay}" Value="True">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type graphSharpControls:VertexControl}">
+                                <Border CornerRadius="5"
+                                        Width="50"
+                                        Height="50"
+                                        Background="Blue"
+                                        ToolTip="{Binding Notes}">
+                                    <StackPanel VerticalAlignment="Center"
+                                        Orientation="Vertical">
+                                        <TextBlock HorizontalAlignment="Center"
+                                                   Foreground="White"
+                                                   Text="{Binding PageNumber, Mode=OneWay}"/>
+                                        <TextBlock Foreground="White"
                                                    Visibility="{Binding Notes, Converter={StaticResource StringToVisibilityConverter}}"
                                                    Text="{Binding Notes}"/>
                                     </StackPanel>

@@ -14,6 +14,7 @@ namespace LDVELH
         public bool IsFirst { get; }
         public bool IsLast { get; }
         public bool IsDeadEnd { get; }
+        public bool IsMandatory { get; }
 
         public PageGraphVertex(PageVM pageVM)
         {
@@ -24,6 +25,7 @@ namespace LDVELH
             IsFirst = pageVM.PageNumber == 1 || pageVM.Notes == "debut";
             IsLast = pageVM.Notes == "fin";
             IsDeadEnd = !IsFirst && !IsLast && Links?.Count == 0;
+            IsMandatory = pageVM.Notes.Contains("***");
         }
 
         public override string ToString()
